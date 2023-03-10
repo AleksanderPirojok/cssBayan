@@ -1,0 +1,29 @@
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.accordion {
+    max-width: 80%;
+}
+
+.item-accordion {
+    margin: 1rem 0;
+}
+
+.item-accordion__radio {
+    display: none;
+}
+
+.item-accordion__text {
+    display: block;
+    border-top: 0.1rem solid grey;
+}
+
+.item-accordion__content {
+    display: none;
+}
+
+.item-accordion__radio:checked ~ .item-accordion__content {
+    display: block;
+}
