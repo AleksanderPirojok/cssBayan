@@ -13,13 +13,17 @@ body {
 .wrapper {
     max-width: 90%;
     margin: 0 auto;
-    cursor: pointer;
 }
 
 /* Accordion style start */
 
+.title {
+    cursor: default;
+}
+
 .accordion {
     max-width: 80%;
+    cursor: pointer;
 }
 
 .item-accordion {
@@ -28,6 +32,10 @@ body {
 
 .item-accordion__radio {
     display: none;
+}
+
+.item-accordion__label {
+    cursor: pointer;
 }
 
 .item-accordion__text {
@@ -62,25 +70,25 @@ body {
 
 /* Accordion hover start */
 
-.accordion:hover > .item-accordion > .item-accordion__text > .item-accordion__plus {
+.accordion:hover > .item-accordion > .item-accordion__label > .item-accordion__text > .item-accordion__plus {
     display: block;
 }
 
-.accordion:hover > .item-accordion > .item-accordion__text {
+.accordion:hover > .item-accordion > .item-accordion__label > .item-accordion__text {
     color: black;
 }
 
-.item-accordion:hover > .item-accordion__content {
+.item-accordion:hover > .item-accordion__label > .item-accordion__content {
     visibility: visible;
 }
 
-.item-accordion:hover > .item-accordion__content > .item-accordion__meme {
+.item-accordion:hover > .item-accordion__label > .item-accordion__content > .item-accordion__meme {
     width: 40%;
     opacity: 1;
 }
 
-.item-accordion:hover > .item-accordion__text > .item-accordion__plus {
-    transform: rotate(45deg);
+.item-accordion:hover > .item-accordion__label > .item-accordion__text > .item-accordion__plus {
+    transform: rotate(135deg);
 }
 
 /* Accordion hover end */
@@ -89,21 +97,21 @@ body {
 
 /* Accordion checked start */
 
-.item-accordion__radio:checked ~ .item-accordion__content {
+.item-accordion__radio:checked ~ .item-accordion__label > .item-accordion__content {
     visibility: visible;
 }
 
-.item-accordion__radio:checked ~ .item-accordion__content > .item-accordion__meme {
+.item-accordion__radio:checked ~ .item-accordion__label > .item-accordion__content > .item-accordion__meme {
     width: 40%;
     opacity: 1;
 }
 
-.item-accordion__radio:checked ~ .item-accordion__text {
+.item-accordion__radio:checked ~ .item-accordion__label > .item-accordion__text {
     color: black;
 }
 
-.item-accordion__radio:checked ~ .item-accordion__text > .item-accordion__plus {
-    transform: rotate(45deg);
+.item-accordion__radio:checked ~ .item-accordion__label > .item-accordion__text > .item-accordion__plus {
+    transform: rotate(135deg);
 }
 
 /* Accordion checked end */
