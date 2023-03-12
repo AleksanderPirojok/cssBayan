@@ -6,12 +6,12 @@
 body {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: black;
 }
 
 .wrapper {
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
 }
 
@@ -22,7 +22,6 @@ body {
 }
 
 .accordion {
-    max-width: 80%;
     cursor: pointer;
 }
 
@@ -41,13 +40,13 @@ body {
 .item-accordion__text {
     display: flex;
     justify-content: space-between;
-    border-top: 0.1rem solid grey;
+    border-top: 0.1rem solid rgba(128, 128, 128, 0.2);
     color: rgb(30, 120, 240);
 }
 
 .item-accordion__plus {
     display: none;
-    width: 1.5rem;
+    width: 1.6rem;
     transition: .3s;
 }
 
@@ -65,33 +64,6 @@ body {
 }
 
 /* Accordion style end */
-
-
-
-/* Accordion hover start */
-
-.accordion:hover > .item-accordion > .item-accordion__label > .item-accordion__text > .item-accordion__plus {
-    display: block;
-}
-
-.accordion:hover > .item-accordion > .item-accordion__label > .item-accordion__text {
-    color: black;
-}
-
-.item-accordion:hover > .item-accordion__label > .item-accordion__content {
-    visibility: visible;
-}
-
-.item-accordion:hover > .item-accordion__label > .item-accordion__content > .item-accordion__meme {
-    width: 40%;
-    opacity: 1;
-}
-
-.item-accordion:hover > .item-accordion__label > .item-accordion__text > .item-accordion__plus {
-    transform: rotate(135deg);
-}
-
-/* Accordion hover end */
 
 
 
@@ -115,3 +87,71 @@ body {
 }
 
 /* Accordion checked end */
+
+
+
+/* Responsive design start */
+
+@media (min-width: 821px) {
+    .accordion:hover > .item-accordion > .item-accordion__label > .item-accordion__text > .item-accordion__plus {
+        display: block;
+    }
+
+    .accordion:hover > .item-accordion > .item-accordion__label > .item-accordion__text {
+        color: black;
+    }
+
+    .item-accordion:hover > .item-accordion__label > .item-accordion__content {
+        visibility: visible;
+    }
+
+    .item-accordion:hover > .item-accordion__label > .item-accordion__content > .item-accordion__meme {
+        width: 40%;
+        opacity: 1;
+    }
+
+    .item-accordion:hover > .item-accordion__label > .item-accordion__text > .item-accordion__plus {
+        transform: rotate(135deg);
+    }
+}
+
+@media (max-width: 820px) {
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    .accordion {
+        cursor: default;
+    }
+
+    .item-accordion__label {
+        cursor: default;
+    }
+
+    .item-accordion__plus {
+        display: block;
+        width: 1.2rem;
+    }
+
+    .item-accordion__radio:checked ~ .item-accordion__label > .item-accordion__content > .item-accordion__meme {
+        width: 60%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    body {
+        font-size: 0.6rem;
+    }
+
+    .item-accordion__plus {
+        width: 0.6rem;
+    }
+
+    .item-accordion__radio:checked ~ .item-accordion__label > .item-accordion__content > .item-accordion__meme {
+        width: 80%;
+    }
+}
+
+/* Responsive design end */
